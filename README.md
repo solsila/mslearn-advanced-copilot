@@ -6,6 +6,36 @@ Gain more practical experience by using this repository that contains a Python W
 
 [![Powered by Awesome Copilot](https://img.shields.io/badge/Powered_by-Awesome_Copilot-blue?logo=githubcopilot)](https://aka.ms/awesome-github-copilot)
 
+## Run the project
+
+Use Python 3.10 or later. From the repository root, create and activate a
+virtual environment, then install the dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+On Windows, activate the environment with
+`.venv\Scripts\activate` instead of `source .venv/bin/activate`.
+
+Start the API:
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Open <http://127.0.0.1:8000/> to go to the API documentation, or visit
+<http://127.0.0.1:8000/docs> directly. The `/countries` endpoint lists
+available countries; `/countries/{country}` lists a country's cities.
+
+Run the tests from the repository root with:
+
+```bash
+python -m pytest
+```
+
 ## Requirements
 
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
